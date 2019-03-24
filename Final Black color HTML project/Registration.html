@@ -1,0 +1,510 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>Project name CRICKET</title>
+ 
+      <link rel="stylesheet" type="text/css" href="mobile450.css" 
+         media="only screen and (min-width:300px) and (max-width:800px)"/>    
+
+			<link rel="stylesheet" href="RegistrationCSS.css"
+         media="only screen and (min-width:800px) and (max-width:1500px)"> 
+				 
+
+<!--      <script type="text/javascript" src="validate.js" ></script>   -->
+
+<script>
+ function Validate()
+      {
+      
+         if( document.myForm.lastName.value === "" )
+         {
+            alert( "Please provide your last name!" );
+            document.myForm.lastName.focus() ;
+            return false;
+         }
+				 
+				  if( document.myForm.firstName.value === "" )
+         {
+            alert( "Please provide your first name!" );
+            document.myForm.firstName.focus() ;
+            return false;
+         }
+				  
+				  if( document.myForm.age.value == "" || ( document.myForm.age.value < "14" || document.myForm.age.value > "110" ))
+         {
+            alert( "Please provide your valid form of Age!" );
+            document.myForm.age.focus() ;
+            return false;
+         }
+				 
+				  if( document.myForm.userName.value === "" )
+         {
+            alert( "Please provide User Name name!" );
+            document.myForm.userName.focus() ;
+            return false;
+         }
+				 
+				  if( document.myForm.password.value === "" )
+         {
+            alert( "Please provide your Password!" );
+            document.myForm.password.focus() ;
+            return false;
+         }
+				 
+				 
+         
+         if( document.myForm.email.value === "" )
+         {
+            alert( "Please provide your proper Email!" );
+            document.myForm.email.focus() ;
+            return false;
+         }
+				 
+				  if( document.myForm.phone.value === "" )
+         {
+            alert( "Please provide your phone number!" );
+            document.myForm.phone.focus() ;
+            return false;
+         }
+				 
+				  if( document.myForm.text.value === "" )
+         {
+            alert( "Please write some good comment!" );
+            document.myForm.text.focus() ;
+            return false;
+         }
+ /*        
+         if( document.myForm.Zip.value == "" ||
+         isNaN( document.myForm.Zip.value ) ||
+         document.myForm.Zip.value.length != 5 )
+         {
+            alert( "Please provide a zip in the format #####." );
+            document.myForm.Zip.focus() ;
+            return false;
+         }
+         
+         if( document.myForm.Country.value == "-1" )
+         {
+            alert( "Please provide your country!" );
+            return false;
+         }
+	*/			 
+         return( true );
+   }
+</script>
+
+ 
+<!-------One------------------------------------------------------->
+<script>
+function onClickHandler() {
+
+var index = Math.round(Math.random() * 9);
+var ColorValue = "F6E3CE"; // default color  (index = 0)
+
+if(index == 1)
+  ColorValue = "FFCCCC"; //peach
+else if(index == 2)
+  ColorValue = "CCAFFF"; //violet
+else if(index == 3)
+  ColorValue = "A6BEFF"; //lt blue
+else if(index == 4)
+  ColorValue = "99FFFF"; //cyan
+else if(index == 5)
+  ColorValue = "D5CCBB"; //tan
+else if(index == 6)
+  ColorValue = "99FF99"; //lt green
+else if(index == 7)
+  ColorValue = "FFFF99"; //lt yellow
+else if(index == 8)
+  ColorValue = "FFCC99"; //lt orange
+else if(index == 9)
+  ColorValue = "CCCCCC"; //lt grey
+
+document.getElementsByTagName("body")[0].style.backgroundColor = "#" + ColorValue;
+}
+</script>
+<!---------Two----------------------------------------------------->
+ <!--
+ <script>
+ 
+ function ScheduledEvent(lastName, firstName, address, 
+              userName, password, email, phone, text, infourl){ 
+
+        this.lastName = lastName;
+				this.firstName = firstName; 
+				this.address = address; 
+        this.userName = userName;  
+        this.password = password;
+				this.email = email; 
+        this.phone = phone;
+				this.text = text;
+        this.infourl = infourl;
+				
+				this.PrintEvent = PrintEvent;
+				} 
+				
+				
+				function PrintEvent(){ 
+					 
+						document.write("<br> Your name is: " + this.lastName +" "+this.firstName); 
+						
+						document.write("<br>Addres is: " + this.address 
+						         +" <br>Your User name is: " + this.userName); 
+						document.write("<br>Your Password: " + this.password );
+						document.write("<br>Your email: " + this.email); 
+					  document.write("<br>PHONE number: " + this.phone ); 
+						document.write("<br>You wrote: " + this.text ); 
+						document.write("<br>More information about the event is available at <a href=' " 
+						         + this.infourl + " '> MoreInformation </a></p>");
+        }
+				
+				function Validate() { 
+				     with (document.evtForm) { 					 
+						 evt = new ScheduledEvent(lastName.value, firstName.value, address.value, 
+						 userName.value, password.value, email.value, phone.value, text.value); 
+						 }
+						   
+						 with (evt) { 
+						 evt.PrintEvent(); 
+						 }
+						  
+				     return true;
+				}
+</script>
+-->
+ <!----------Three--------------------------------------------------------> 
+ <script>
+ var popupWindow = null;
+        
+        function MakePopup (event) {
+            if (window.createPopup) {        
+                if (!popupWindow) {
+                    popupWindow = window.createPopup ();
+                    var popupBody = popupWindow.document.body;
+                    popupBody.style.backgroundColor = "lightblue";
+                    popupBody.style.border = "solid black 1px";
+                    popupBody.innerHTML = "Please enter all fields for complete registration form";
+                    popupBody.onmouseover = function () {popupWindow.hide ();};
+                }
+                popupWindow.show (350, 220, 180, 40, document.body);
+            }
+            else {
+                alert ("Your browser does not support this example!");
+            }
+        }
+ </script>
+<!----------Four--------------------------------------------------------> 
+
+
+		      
+<!----------Five--------------------------------------------------------> 
+ <script src="jquery-1.10.1.min.js"></script> 
+<script>  
+	    $(document).ready(function(){ 
+		     $("#title").click(function(){ 
+		     $("#panel").slideToggle("slow"); 
+		}); 
+		});
+		</script>
+		<style type="text/css">
+		#panel,#title 
+		{ 
+		padding:10px; 
+		color:blue; 
+		text-align:center; 
+		background-color:#D8CEF6; 
+		} 
+		#panel 
+		{ 
+		padding:50px; 
+		display:none; 
+		}
+		</style>
+<!---------------Six-------------------------------------------------->
+     <meta name="viewport" content="width=device-width, initial- scale=1">
+		 <scriptsrc="jquery-1.10.1.min.js">
+		 </script>
+		 <scriptsrc="jquery.mobile-1.3.1.min.js">
+		 </script>
+		 <link rel="stylesheet" href="jquery.mobile-1.3.1.min.css" />  
+<!---------------Seven-------------------------------------------------->
+
+<script>
+   function getFocus(){
+   document.getElementById("lastName").focus();
+   }
+</script>
+</head>    
+<!----------------END HEAD ------------------------------------------>
+
+
+
+
+
+
+
+
+
+<!----------------BODY START ------------------------------------------>
+<!----------------BODY START ------------------------------------------>
+<body>
+       <div id="container">
+<!---------------- header------------------>
+<div id="header">
+	<br>
+          <section>
+     <div data-role="page">
+
+					   <div id = "button">
+						    <a href="#" data-role="button" data-icon="about" data- theme="a">
+			                   ABOUT</a>
+								<a href="HOME.html" data-role="button" data-icon="home" data- theme="b">
+			                   HOME</a>				 							
+					   </div> 
+			</div>			  
+					</section>
+<!--------------JQuery MOBILE Button--------------------------------->	
+<!--   <section>
+      <div data-role="page">
+					<div id = "button">											
+             <div data-role="page">
+               <ul data-role="listview" data-inset="true" data- filter="true">
+			         <li><a href="#">ABOUT</a>
+			         <a href="HOME.html">Go to HOME</a></li>
+			         </ul>
+		         </div>				 			 							
+					</div> 
+			</div>			  
+	</section>
+	-->
+<!--------------JQuery Canvas----------------------------->
+
+		<canvas id="myCanvas" width="470" height="120"> <!-- style="border:1px solid blue">-->
+		</canvas>
+		
+	
+		<script>
+		     var c=document.getElementById("myCanvas"); 
+				 var ctx=c.getContext("2d"); 
+			   ctx.font="40px Arial"; ctx.fillStyle='red'; 
+				 ctx.fillText("Registration",70,50); 
+				 
+				 
+				 ctx.font="40px Arial"; ctx.fillStyle='blue'; 
+				 ctx.fillText("for",300,50);
+				 
+				 ctx.font="40px Arial"; ctx.fillStyle='green'; 
+				 ctx.fillText("Membership of",5,100);
+				 
+				 ctx.font="40px Arial"; ctx.fillStyle='violet'; 
+				 ctx.fillText("CRICKET",280,100);		 
+				 
+		</script>							   
+
+</div>    <!--end of header-->
+
+
+
+<!------------------------start wrapper ----------------------------->
+<!------------------------nav (left)--------------------------------->
+
+<div id="wrapper">
+  <div id= "nav">
+   <br><br><br><br><br>
+        <section id="Registration">	
+	            <h4>Name of Game</h4>
+              <ul class="image">
+									<li><a href ="page-20.html"
+                         title="world cup 20/20">World Cup 20/20</a></li>
+			            <li><a href ="page-50.html"
+                         title="world cup 50/50">World Cup 50/50</a></li>
+			            <li><a href ="page-asia.html"
+                         title="asia cup">Asia Cup</a></li>
+		          </ul>   
+         </section>	 
+
+				
+					
+	<!---------------------------start left lower--------------------------->					
+			<br>	
+
+<section id="Registration">	
+	            <h4>Name of Country</h4>
+              <ul class="image">
+									<li><a href ="page-20.html"
+                         title="world cup 20/20">Australia</a></li>
+			            <li><a href ="page-50.html"
+                         title="world cup 50/50">Bangladesh</a></li>
+			            <li><a href ="page-asia.html"
+                         title="asia cup">England</a></li>
+								  <li><a href ="page-asia.html"
+                         title="asia cup">India</a></li>
+									<li><a href ="page-20.html"
+                         title="world cup 20/20">Pakistan</a></li>
+			            <li><a href ="page-50.html"
+                         title="world cup 50/50">Newzeland</a></li>
+			            <li><a href ="page-asia.html"
+                         title="asia cup">Srilanka</a></li>
+									<li><a href ="page-20.html"
+                         title="world cup 20/20">South Africa</a></li>
+			            <li><a href ="page-50.html"
+                         title="world cup 50/50">West Indies</a></li>
+			            <li><a href ="page-asia.html"
+                         title="asia cup">Zimbabue</a></li>
+									<li><a href ="page-20.html"
+                         title="world cup 20/20">Ireland</a></li>
+			            <li><a href ="page-50.html"
+                         title="world cup 50/50">Denmark</a></li>
+			            <li><a href ="page-asia.html"
+                         title="asia cup">Emirat</a></li>
+		          </ul> 
+							<br><br>  
+         </section>	
+				 <br>		 
+				 
+   </div>
+
+
+<!---------------------------start right--------------------------->
+
+
+        <div id="right">	
+				<br><br><br><br><br>
+				  <section id="Registration">
+					<br>
+					<a href ="pic-14.html" title="India team in batting position" >
+					              <img src="14.jpg" alt="cricket" width="100" height="60" ></a>		
+          <a href ="pic-2" title="Pakistan team in fielding position" >
+					              <img src="2.jpg" alt="cricket" width="100" height="60"></a>	
+					<a href ="pic-5" title="Australia wicketkiper trying to catch the ball" >
+					              <img src="5.jpg" alt="cricket" width="100" height="60"></a>
+					<a href ="pic-7" title="South Africa player trying to catch the ball" >
+					              <img src="7.jpg" alt="cricket" width="100" height="60"></a>	
+					<a href ="pic-1" title="India team in batting position" >
+					              <img src="1.jpg" alt="cricket" width="100" height="60" ></a>		
+         <a href ="pic-13" title="England team in fielding position" >
+					              <img src="13.jpg" alt="cricket" width="100" height="60"></a>
+				 <a href ="pic-14" title="England team in fielding position" >
+					              <img src="14.jpg" alt="cricket" width="100" height="60"></a>	
+				  <a href ="pic-17" title="England team in fielding position" >
+					              <img src="17.jpg" alt="cricket" width="100" height="60"></a>							
+
+				</section>
+				
+        </div>
+				
+			
+
+
+
+
+<!------------------------------start center---------------------->			
+<!------------------------------start center---------------------->				
+ 
+   
+  <div id="center">
+<!------------------Form for Registration-------------------------->
+
+<br><br><br><br><br>
+  
+<section id="Registration3">
+
+
+  <form align="center" name="myForm"  method="post"  onsubmit="Validate();">
+<!--  <form align="center" name="myForm"  method="post"  onsubmit="Validate();">  -->
+
+	    <div id="title">Please fill form and submit. click to see more/less message</div>  
+	
+		  <div id="panel">Alert box will popup if you don't enter all fields.<br>
+                      If more than one field (including first field)empty, then first field message will popup.
+											<br>Clear button click, cursor will go to  first field in "Last Name".<br>
+                      Please enter all fields for submit registration.</div>
+<!-----------------------------------Table----------------------------->		
+	  <div id="table">
+    <table>									                 
+
+     <tr><td><p>Last Name:</p></td>
+         <td><input type=name  id= "lastName"   size="25" onclick="MakePopup (event);"></td>
+					<td><a href ="#" title="Please enter your LAST NAME for registration" >
+					    <img src="01.jpg" alt="registration" width="20" height="20"></a></td></tr>		 
+								 							 
+		 <tr><td><p>First Name:</p></td>
+		     <td><input type=name id= "firstName"  size="25" onclick="MakePopup (event);"/></td> 
+         <td><a href ="#" title="Please enter your FIRST NAME for registration" >
+					    <img src="01.jpg" alt="registration" width="20" height="20"></a></td></tr>	
+							   
+		 <tr><td><p>Age:</p></td>
+		     <td><input type=name id= "age"  size="25" onclick="MakePopup (event);"/> 
+         <td><a href ="#" title="Please enter your AGE for registration" >
+					    <img src="01.jpg" alt="registration" width="20" height="20"></a></td></tr>	  
+						
+		 <tr><td><p>User Name:</p></td>
+		     <td><input type=name id= "userName"  size="25" onclick="MakePopup (event);"/> 
+         <td><a href ="#" title="Please enter your USER NAME for registration" >
+					    <img src="01.jpg" alt="registration" width="20" height="20"></a></td></tr>											
+ 
+			<tr><td><p>Password:</p></td>
+        <td><input type=name  id= "password"   size="25" onclick="MakePopup (event);"></td>
+        <td><a href ="#" title="Please enter your PASSWORD for registration" >
+					    <img src="01.jpg" alt="registration" width="20" height="20"></a></td></tr>
+				
+			<tr><td><p>Email:</p></td>
+        <td><input type=name  id= "email"   size="25" onclick="MakePopup (event);"></td>
+        <td><a href ="#" title="Please enter your EMAIL for registration" >
+					    <img src="01.jpg" alt="registration" width="20" height="20"></a></td></tr>
+				
+      <tr><td><p>Phone:</p></td>
+        <td><input type=name  id= "phone"   size="25" onclick="MakePopup (event);"></td>
+        <td><a href ="#" title="Please enter your PHONE NUMBER for registration" >
+					    <img src="01.jpg" alt="registration" width="20" height="20"></a></td></tr>
+				
+	   <tr><td><p>Description:</p></td>
+        <td><input type=name  id= "text"   size="25" onclick="MakePopup (event);"></td>
+       <td><a href ="#" title="Please write some comments" >
+					    <img src="01.jpg" alt="registration" width="20" height="20"></a></td></tr>							
+										
+										
+
+		</table>
+		</div>  <!--end of div table-->
+		<br><br>
+		<!---------------Change color----------------------------------->
+	
+		<input type = submit value = "Submit" />   
+		<input type="reset" value="Reset" />
+		
+    <button type="button" onclick="getFocus()">Clear</button>   
+         <Input type="Button"
+         name="Big_Button"  
+         value="Change color"
+         onClick="onClickHandler()">
+		</form>	
+					
+	<!--current date------------------------------------>						
+			<p>
+			<script>
+			var d=new Date(); 
+			document.write("The current local date and time:   ");
+      document.write(d);	
+      </script>			
+			</p>	
+     <!--  <input type ="submit">-->
+      	
+      <div id = "panel"></div>
+		 
+   </section>
+		 </div><!--end of center  --> 
+		 </div> <!--end of wrapper-->
+
+<!--------------------------start footer----------------------->		 		 
+
+<div id="footer">
+
+   <p>Copyright @ Zubaer Ahmed, SD1340, ITT technical institute</p>
+</div>   <!--end of footer-->
+
+     </div>  <!--end of container-->
+</body>
+</html>
+

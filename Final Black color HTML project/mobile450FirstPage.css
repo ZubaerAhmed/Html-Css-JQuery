@@ -1,0 +1,121 @@
+
+body {
+   background-color: #F6E3CE;  
+
+
+}
+p {color:black;
+    text-align:center;}
+h1 {color:green;
+    text-align:center;
+   /* background-color:blue;*/} 
+h2 { color:green;}
+h2:hover {background: red;}
+h2:visited {background: blue}
+h2:active {background: green}
+h3{ color:green;}
+h3:hover {background: red;}
+h3:visited {background: blue;}
+h3:active {background: yellow;}
+
+
+section#a:hover {background: red;}
+a:visited {background: blue;}
+a:active {background: yellow;}
+
+
+
+
+section#button a:hover {background: green;}
+section#button a:visited {background: blue;}
+#button a:active {background: yellow;}
+#button a { border: 2px inset #CCCCCC;
+            padding: 3px 35px;
+						color: red;
+						background-color: yellow;
+						font-size: 1.2 em;
+						font-family: Arial,Helvetia, sana-serif;
+						font-weight: bold;
+						text-align: center;
+						text-decoration: non;
+						position:center;
+						}
+
+ul.image {list-style-image: url('bullet-2.jpg');}
+
+
+
+
+ 	  
+section#Registration {
+        border:1px solid green;
+        background-color:black;
+				text-align:center; }
+				
+				
+				
+				
+				
+				
+				
+				
+section#Registration2 {
+ /*           border:1px solid green;
+              background-color: tan;     */
+				text-align:center; }
+section#Registration3 {
+        padding:35px 110px ;
+        border:1px solid green;
+        background-color: #D8CEF6;
+				text-align:right; 
+				}	
+section#One {border:1px solid green;
+        background-color: tan;
+				text-align: center;}
+#one a:hover {background: red;}
+#one a:visited {background: blue;}
+#one a:active {background: yellow;}	
+
+
+	
+				
+				
+#header {
+    float: left;
+		height: 60px;
+    width: 100%;
+/*    background-color:tan;   
+		border: 1px solid #000000;  */
+		color: white;
+		text-align: center;
+}
+
+#footer {
+   float:left;
+	 height: 10px; 
+	 width: 100%;
+	 text-align: center;
+/*	 color: white;
+	 font-style: bold;
+   border: 2px solid #000000;
+   background-color:tan;   */
+}			
+				
+
+#wrapper {
+overflow:hidden;
+width: 150%;
+float: left;
+}
+
+
+#center {
+     /*border: 1px solid #0f0; */
+		 padding:20px;
+     overflow: hidden;
+		 margin-bottom: -2000px; 
+	/*	 padding-left: 30px;  */
+     padding-bottom: 2000px;
+/*    background-color:wheat;  */
+}
+

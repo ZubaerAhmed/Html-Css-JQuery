@@ -1,0 +1,63 @@
+
+
+
+
+
+
+body {
+   background-color: #000000;  
+
+}
+
+p {color:black;
+    text-align:center;}
+h1 {color:green;
+    text-align:center;
+   /* background-color:blue;*/} 
+h2 { color:green;}
+h2:hover {background: red;}
+h2:visited {background: blue}
+h2:active {background: green}
+h3{ color:green;}
+h3:hover {background: red;}
+h3:visited {background: blue;}
+h3:active {background: yellow;}
+
+
+a:hover {background: red;}
+a:visited {background: blue;}
+a:active {background: yellow;}
+
+
+
+
+#button a:hover {background: green;}
+#button a:visited {background: blue;}
+#button a:active {background: yellow;}
+#button a { border: 2px inset #CCCCCC;
+            padding: 3px 35px;
+						color: red;
+						background-color: yellow;
+						font-size: 1.2 em;
+						font-family: Arial,Helvetia, sana-serif;
+						font-weight: bold;
+						text-align: center;
+						text-decoration: non;
+						position:center;
+						} 	  
+section#Registration {
+        border:1px solid green;
+        background-color:tan;
+				text-align:center; 
+				}
+#header {
+    float: left;
+		height: 60px;
+    width: 100%;
+/*    background-color:tan;   
+		border: 1px solid #000000;  */
+		color: white;
+		text-align: center;
+}
+	
+
